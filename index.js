@@ -46,6 +46,10 @@ app.post('/atccareer', function (req, res) {
 });
 });
 
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
 app.listen(59961, function () {
 	
     console.log('online on port 80');
