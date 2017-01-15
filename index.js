@@ -50,9 +50,9 @@ app.post('/atccareer', function (req, res) {
 });
 
 
-app.listen(59961, function () {
+app.listen(config.port, function () {
 	
-    console.log('online on port 80');
+    console.log('online on port' + config.port);
 });
 
 
