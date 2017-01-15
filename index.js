@@ -1,13 +1,13 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
 var config = require('./config.js');
-var bodyParser = require('body-parser')
+var app = express();
 var latestTemp;
 var latestPressure;
 var latestHumidity;
 var latestTime;
 var ready = false;
-
+var bodyParser = require('body-parser')
 var Datastore = require('nedb');
 var dateFormat = require('dateformat');
 var open = new Date();
@@ -45,6 +45,10 @@ app.get('/atccareer', function (req, res) {
 			
 	});
 });
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
 app.use(bodyParser.urlencoded({
     extended: true
 }));
