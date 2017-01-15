@@ -7,7 +7,7 @@ var bodyParser = require('body-parser')
 
 app.configure(function() {
   app.use(express.bodyParser());
-};
+});
 
 app.engine('handlebars', exphbs({defaultLayout: false}));
 app.set('view engine', 'handlebars');
