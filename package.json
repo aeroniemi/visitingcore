@@ -1,0 +1,19 @@
+{
+  "name": "bgvacc-visitingcore",
+  "version": "1.0.0",
+  "description": "A node-based web interface for a visitng controller system",
+  "main": "index.js",
+  "dependencies": {
+    "dateformat": "^2.0.0",
+    "express": "^4.14.0",
+    "nedb": "^1.8.0",
+    "express-handlebars": "^3.0.0",
+      "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "comp500, arbvl, rigaia",
+  "license": "MIT"
+}
