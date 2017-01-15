@@ -41,8 +41,7 @@ app.get('/atccareer', function (req, res) {
 app.post('/atccareer', function (req, res) {
    res.render('index');
     console.log('it works');
-    db.insert({
-			cid: res.body.cid,
+    console.dir(res.body)
 });
 });
 
