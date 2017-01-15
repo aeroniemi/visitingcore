@@ -3,7 +3,7 @@ var exphbs  = require('express-handlebars');
 var config = require('./config.js');
 var app = express();
 var ready = false;
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 
 
 var Datastore = require('nedb');
@@ -16,6 +16,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static('static'));
 
 app.use(bodyParser.urlencoded({
+    extended: true
 }));
 
 
@@ -45,7 +46,13 @@ app.get('/atccareer', function (req, res) {
 app.post('/atccareer', function (req, res) {
    res.render('index');
     console.log('it works');
-    console.dir(req.body)
+    db.insert({
+            Fname: res.body.Fname,
+            cid: res.body.cid,
+            emailadd: res.body.cid,
+            division: res.body.cid,
+            vacc: res.body.cid,
+});
 });
 
 
