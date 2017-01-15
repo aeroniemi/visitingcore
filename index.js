@@ -5,9 +5,6 @@ var app = express();
 var ready = false;
 var bodyParser = require('body-parser')
 
-app.configure(function() {
-  app.use(express.bodyParser());
-});
 
 app.engine('handlebars', exphbs({defaultLayout: false}));
 app.set('view engine', 'handlebars');
@@ -36,7 +33,7 @@ app.get('/atccareer', function (req, res) {
 			
 	
 });
-app.post = function (req, res) {
+app.post('/atccareer', function (req, res) {
    res.render('index', { txtName: req.body.txtName });
 }
 
