@@ -15,6 +15,10 @@ app.engine('handlebars', exphbs({defaultLayout: false}));
 app.set('view engine', 'handlebars');
 app.use(express.static('static'));
 
+app.use(bodyParser.urlencoded({
+}));
+
+
 app.get('/', function (req, res) {
 	
 		res.render("index", {
@@ -43,11 +47,7 @@ app.post('/atccareer', function (req, res) {
     console.log('it works');
     console.dir(res.body)
 });
-});
 
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
 
 app.listen(59961, function () {
 	
