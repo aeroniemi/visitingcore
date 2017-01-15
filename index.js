@@ -34,11 +34,13 @@ app.get('/atccareer', function (req, res) {
 	
 });
 app.post('/atccareer', function (req, res) {
-   res.render('index', { txtName: req.body.txtName });
+   res.render('index');
+    console.log('it works');
 }
 
 app.listen(59961, function () {
-	console.log('online on port 80');
+	
+    console.log('online on port 80');
 });
 
 
