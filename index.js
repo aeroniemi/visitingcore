@@ -45,7 +45,7 @@ app.get('/atccareer', function (req, res) {
 app.post('/atccareer', function (req, res) {
    res.render('index');
     console.log('it works');
-    console.dir(res.body)
+    console.dir(req.body)
 });
 
 
