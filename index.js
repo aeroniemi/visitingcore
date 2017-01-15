@@ -43,13 +43,13 @@ app.get('/atccareer', function (req, res) {
 		res.render("atccareer", {
 			ready: true,
             });
-			var content = req.body;
-            console.log(content);
+			
 	
 });
 app.use(bodyParser.urlencoded({
     extended: true
-    
+    var content = req.body;
+            console.log(content);
 }));
 
 app.listen(59961, function () {
