@@ -39,6 +39,13 @@ app.get('/override', function (req, res) {
 			
 	});
 });
+app.get('/atccareer', function (req, res) {
+	
+		res.render("atccareer", {
+			ready: true,
+			
+	});
+});
 
 
 app.listen(59961, function () {
