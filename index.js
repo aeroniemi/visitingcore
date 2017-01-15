@@ -17,7 +17,9 @@ var db = new Datastore({ filename: 'latest.txt', autoload: true }); // rename to
 
 var counter = 0;
 
-
+app.configure(function() {
+  app.use(express.bodyParser());
+}
 
 app.engine('handlebars', exphbs({defaultLayout: false}));
 app.set('view engine', 'handlebars');
@@ -46,12 +48,12 @@ app.get('/atccareer', function (req, res) {
 			
 	
 });
-app.use(bodyParser.urlencoded({
-    extended: true
-    var content = req.body;
-            console.log(content);
-}));
+exports.post = function (req, res) {
+   res.render('index', { txtName: req.body.txtName });
+}
 
 app.listen(59961, function () {
 	console.log('online on port 80');
 });
+
+
