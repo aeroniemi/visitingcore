@@ -17,8 +17,7 @@
 
 	<!-- Custom styles for this template -->
 	<link href="src/style.css" rel="stylesheet">
-	<script src="src/chartJS/Chart.bundle.js"></script>
-	<script src="src/chartJS/samples/utils.js"></script>
+	<script src="src/formsubmit.js"></script>
 	<style>
 
 	</style>
@@ -38,31 +37,37 @@
 		<strong>Warning!</strong> This is not production software
 	</div>
 
+    <script>function submit (form) {
+    var TestVar = form.inputbox.value;
+    alert ("You typed: " + TestVar);
+}</script>
     <div class="container">
 
-      <form class="form-signin">
+        
+
+      <form class="form-signin" name="atcCareerApp" method="post">
         <h2 class="form-signin-heading">ATC Career application form</h2>
         <div class="form-group">
-            <label for="email">Email address:</label>
-            <input type="email" class="form-control" id="email">
+            <label for="inputName">Full Name</label>
+            <input type="text" id="inputName" name="Fname"class="form-control" placeholder="John Smith" required autofocus>
         </div>
         <div class="form-group">
             <label for="inputCID">VATSIM CID</label>
-            <input type="text" id="inputCID" class="form-control" placeholder="VATSIM CID" required autofocus>
+            <input type="text" id="inputCID" name="cid" class="form-control" placeholder="1302142" required autofocus>
         </div>
         <div class="form-group">
             <label for="inputEmail">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+            <input type="email" id="inputEmail" name="emailadd" class="form-control" placeholder="john.smith@rovacc.ro" required>
         </div>
         <div class="form-group">
             <label for="inputDivision">VATSIM Division</label>
-            <input type="text" id="inputDivision" class="form-control" placeholder="eg. VATEUD" required>
+            <input type="text" id="inputDivision" name="division" class="form-control" placeholder="VATEUD" required>
         </div>
         <div class="form-group">
             <label for="inputVACC">VATSIM VACC</label>
-            <input type="text" id="inputVACC" class="form-control" placeholder="eg. Romania" required>
+            <input type="text" id="inputVACC" name="vacc" class="form-control" placeholder="Romania" required>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" onClick="testResults(this.form)">Submit</button>
       </form>
 
     </div> <!-- /container -->
