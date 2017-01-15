@@ -37,34 +37,23 @@
 	<div class="alert alert-warning" style="margin-top:-1.75em" role="alert">
 		<strong>Warning!</strong> This is not production software
 	</div>
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>BGVACC visiting site</h1>
-        <p>What have you come here to do?</p>
-      </div>
-    </div>
 
     <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Apply to visit as a controller</h2>
-          <p>To apply as a visiting controller you need a minimum S2 rating, have controlled for over 50 hours on this rating, and not mvoed VACC in the last 90 days. As a visitor, you will be provided with compulsory training and reuqired to control a minimum of 10 hours within our airspace per month</p>
-          <a href="atcvisit"><button class="btn btn-lg btn-primary btn-block">Apply now</button></a>
-        </div>
-        <div class="col-md-4">
-          <h2>Apply to transfer as a controller</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <a href="atctransfer"><button class="btn btn-lg btn-primary btn-block">Apply now</button></a>
-       </div>
-        <div class="col-md-4">
-          <h2>Apply to start your ATC career</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <a href="atccareer"><button class="btn btn-lg btn-primary btn-block">Apply now</button></a>
-        </div>
-      </div>
-    
+
+      <form class="form-app">
+        <h2 class="form-app-heading">ATC Career application form</h2>
+          <label for="inputCID" class="sr-only">VATSIM CID</label>
+        <input type="text" id="inputCID" class="form-control" placeholder="VATSIM CID" required autofocus>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+        <label for="inputDivision" class="sr-only">VATSIM Division</label>
+        <input type="text" id="inputDivision" class="form-control" placeholder="eg. VATEUD" required>
+            <label for="inputVACC" class="sr-only">VATSIM VACC</label>
+        <input type="text" id="inputVACC" class="form-control" placeholder="eg. Romania" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+      </form>
+
+    </div> <!-- /container -->
 <footer class="footer">
       <div class="container">
         <p class="text-muted">Source code on <a href="https://github.com/comp500/sensor-reporter">GitHub</a></p>
