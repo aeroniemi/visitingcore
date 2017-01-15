@@ -6,6 +6,11 @@ var ready = false;
 var bodyParser = require('body-parser')
 
 
+var Datastore = require('nedb');
+var dateFormat = require('dateformat');
+var open = new Date();
+var db = new Datastore({ filename: 'latest.txt', autoload: true }); // rename to dbLatest
+
 app.engine('handlebars', exphbs({defaultLayout: false}));
 app.set('view engine', 'handlebars');
 app.use(express.static('static'));
@@ -36,7 +41,10 @@ app.get('/atccareer', function (req, res) {
 app.post('/atccareer', function (req, res) {
    res.render('index');
     console.log('it works');
-}
+    db.insert({
+			cid: res.body.cid,
+});
+});
 
 app.listen(59961, function () {
 	
