@@ -40,6 +40,6 @@ app.get('/', function (req, res) {
 
 
 
-app.listen(80, function () {
+app.listen(86, function () {
 	console.log('Weather station online on port 80');
 });
