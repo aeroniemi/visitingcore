@@ -2,5 +2,6 @@ module.exports = {
 	vatsimsso: {
 		interval: 60 * 1000 
 	},
-	port: 59961,
+	var port = 59961,
+	
 };
