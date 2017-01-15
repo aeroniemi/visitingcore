@@ -2,7 +2,8 @@ var express = require('express');
 var exphbs  = require('express-handlebars');
 var config = require('./config.js');
 var app = express();
-
+var hbs = require('hbs');
+require('handlebars-form-helpers').register(hbs.handlebars);
 var latestTemp;
 var latestPressure;
 var latestHumidity;
