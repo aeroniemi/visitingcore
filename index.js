@@ -1,8 +1,7 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
 var config = require('./config.js');
-var app = express();
-require('handlebars-form-helpers').register(exphbs.handlebars);
+var bodyParser = require('body-parser')
 var latestTemp;
 var latestPressure;
 var latestHumidity;
@@ -46,7 +45,9 @@ app.get('/atccareer', function (req, res) {
 			
 	});
 });
-
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 app.listen(59961, function () {
 	console.log('online on port 80');

@@ -23,6 +23,3 @@ $(function() {
 });
 
 
-<h2>JSON</h2>
-<pre id="result">
-</pre>
