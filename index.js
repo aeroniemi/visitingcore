@@ -32,6 +32,14 @@ app.get('/', function (req, res) {
 	});
 });
 
+app.get('/override', function (req, res) {
+	
+		res.render("override", {
+			ready: true,
+			
+	});
+});
+
 
 app.listen(59961, function () {
 	console.log('online on port 80');
