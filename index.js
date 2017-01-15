@@ -42,15 +42,14 @@ app.get('/atccareer', function (req, res) {
 	
 		res.render("atccareer", {
 			ready: true,
-			
-	});
+            });
+			var content = req.body;
+            console.log(content);
+	
 });
 app.use(bodyParser.urlencoded({
     extended: true
-}));
-
-app.use(bodyParser.urlencoded({
-    extended: true
+    
 }));
 
 app.listen(59961, function () {
