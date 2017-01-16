@@ -2,10 +2,10 @@ var mgconfig = require('./././././mailgunconfig.js');
 var mailgun = require('mailgun-js')({apiKey: mgconfig.api_key, domain: mgconfig.domain});
 
 var data = {
-	from: 'Excited User <me@samples.mailgun.org>',
-	to: 'serobnic@mail.ru',
+	from: 'visitingcore <alex.beavil@rovacc.ro>',
+	to: 'alex.beavil@rovacc.ro',
 	subject: 'Hello',
-	text: 'Testing some Mailgun awesomness!'
+	text: req.body
 };
 
 
