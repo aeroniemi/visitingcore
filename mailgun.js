@@ -9,7 +9,7 @@ var data = {
 };
 
 
-module.exports = function(acmail){
+module.exports = function(){
 	return new Promise(function (resolve, reject){
 			mailgun.messages().send(data, function (error, body) {
 	console.log(body);
