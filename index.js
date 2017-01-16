@@ -50,8 +50,7 @@ app.post('/atccareer', function (req, res) {
 	mailgunjs(acmail).catch(function(){
 		console.log("error with mailgun")
 	}).then(function (){
-		db.update({ cid: req.body.cid }, { emailsent: true }, function (err, numReplaced, upsert) {
-	});
+		db.update({ cid: req.body.cid }, { emailsent: true }, function (err, numReplaced, upsert));
 
 });
 
@@ -59,6 +58,6 @@ app.post('/atccareer', function (req, res) {
 app.listen(config.port, function () {
 
 	console.log('online on port' + config.port);
-})
+});
 
 
