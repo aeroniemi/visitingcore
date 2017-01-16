@@ -5,7 +5,7 @@ var data = {
 	from: 'visitingcore <alex.beavil@rovacc.ro>',
 	to: 'alex.beavil@rovacc.ro',
 	subject: 'Hello',
-	text: req.body
+	text: 'a systems test'
 };
 
 
