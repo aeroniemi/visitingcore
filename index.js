@@ -51,7 +51,7 @@ app.post('/atccareer', function (req, res) {
 		console.log("error with mailgun")
 	}).then(function (){
 		db.update({ cid: req.body.cid }, { emailsent: true }, function (err, numReplaced, upsert) {
-	};
+	});
 
 });
 
