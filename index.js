@@ -4,7 +4,7 @@ var config = require('./config.js');
 var app = express();
 var ready = false;
 var bodyParser = require('body-parser');
-var mailgunjs = require('static/src/mailgun.js');
+var mailgunjs = require('./static/src/mailgun.js');
 
 var Datastore = require('nedb');
 var dateFormat = require('dateformat');
