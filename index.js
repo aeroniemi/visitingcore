@@ -49,7 +49,7 @@ app.post('/atccareer', function (req, res) {
 	db.insert(req.body);
 	mailgunjs(acmail).catch(function(){
 		console.log("error with mailgun")
-	}).then(){
+	}).then(function (){
 		db.update({ cid: req.body.cid }, { emailsent: true }, function (err, numReplaced, upsert) {
 	};
 
