@@ -52,7 +52,7 @@ app.post('/atccareer', function (req, res) {
 	}).then(function (){
 		db.update({ cid: req.body.cid }, { emailsent: true }, function (err, numReplaced, upsert){});
 
-});
+	}});
 
 
 app.listen(config.port, function () {
