@@ -8,7 +8,15 @@ var data = {
 	text: 'Testing some Mailgun awesomness!'
 };
 
-mailgun.messages().send(data, function (error, body) {
+
+module.exports = function(acmail){
+	return new Promise(function (resolve, reject){
+			mailgun.messages().send(data, function (error, body) {
 	console.log(body);
-});
+				resolve("mail delivery status notifyed")
+
+				});
+	});
+
+
 };
