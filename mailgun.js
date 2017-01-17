@@ -1,6 +1,6 @@
 var mgconfig = require('./static/src/mailgunconfig.js');
 var mailgun = require('mailgun-js')({apiKey: mgconfig.api_key, domain: mgconfig.domain});
-
+var index = require("./index.js");
 var template = {
 	from: 'visitingcore <alex.beavil@rovacc.ro>',
 	to: data.emailadd,
