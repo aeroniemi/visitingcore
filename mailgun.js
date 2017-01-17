@@ -12,7 +12,8 @@ var data = {
 module.exports = function(){
 	return new Promise(function (resolve, reject){
 			mailgun.messages().send(data, function (error, body) {
-	console.log(body);
+	console.log(body + ":");
+				console.log(error);
 				resolve("mail delivery status notifyed")
 
 				});
