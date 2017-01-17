@@ -1,17 +1,17 @@
 var mgconfig = require('./static/src/mailgunconfig.js');
 var mailgun = require('mailgun-js')({apiKey: mgconfig.api_key, domain: mgconfig.domain});
 
-var data = {
+var template = {
 	from: 'visitingcore <alex.beavil@rovacc.ro>',
-	to: 'alex.beavil@rovacc.ro',
-	subject: 'Hello',
-	text: 'a systems test'
+	to: data.emailadd,
+	subject: data.cid + ' - Hello!',
+	text: 'a systems test: division=' + data.division
 };
 
 
 module.exports = function(){
 	return new Promise(function (resolve, reject){
-			mailgun.messages().send(data, function (error, body) {
+			mailgun.messages().send(template, function (error, body) {
 	console.log(body + ":");
 				console.log(error);
 				console.log(req.body);
