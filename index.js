@@ -47,13 +47,11 @@ app.post('/atccareer', function (req, res) {
 	res.render('index');
 	console.log('it works');
 	module.exports = { 
-		data: {
 			Fname: req.body.Fname,
   			cid: req.body.cid,
  			emailadd: req.body.emailadd,
   			division: req.body.division,
   			vacc: req.body.vacc
-		}
 	}
 	mailgunjs().catch(function(){
 		console.log("error with mailgun")
