@@ -46,7 +46,7 @@ app.get('/atccareer', function (req, res) {
 app.post('/atccareer', function (req, res) {
 	res.render('index');
 	console.log('it works');
-
+	module.exports = req.body;
 	mailgunjs().catch(function(){
 		console.log("error with mailgun")
 	}).then(function (){
