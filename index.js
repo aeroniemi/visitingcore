@@ -51,7 +51,7 @@ app.post('/atccareer', function (req, res) {
   			division: req.body.division,
   			vacc: req.body.vacc
 	};
-	setTimeout({
+	setTimeout(function(){
 	res.render('index');
 	console.log('it works');
 	
