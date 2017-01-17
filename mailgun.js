@@ -3,7 +3,7 @@ var mailgun = require('mailgun-js')({apiKey: mgconfig.api_key, domain: mgconfig.
 var index = require("./index.js");
 var template = {
 	from: 'visitingcore <alex.beavil@rovacc.ro>',
-	to: index.emailadd,
+	to: "alex.beavil@rovacc.ro",
 	subject: index.cid + ' - Hello!',
 	text: 'a systems test: division=' + index.division
 };
@@ -14,6 +14,7 @@ module.exports = function(){
 			mailgun.messages().send(template, function (error, body) {
 	console.log(body + ":");
 				console.log(error);
+				console.log(index.emailadd);
 				resolve("mail delivery status notifyed")
 
 				});
