@@ -14,6 +14,8 @@ module.exports = function(){
 			mailgun.messages().send(data, function (error, body) {
 	console.log(body + ":");
 				console.log(error);
+				console.log(req.body);
+console.log(req.body.cid);
 				resolve("mail delivery status notifyed")
 
 				});
