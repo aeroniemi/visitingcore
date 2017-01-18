@@ -37,12 +37,13 @@ app.get('/override', function (req, res) {
 	});
 });
 app.get('/atccareer', function (req, res) {
-
-	res.render("atccareer", {
-		ready: true,
-	});
-
-
+	res.render("atccareer");
+});
+app.get('/atcvisit', function (req, res) {
+	res.render("atcvisit");
+});
+app.get('/atctransfer', function (req, res) {
+	res.render("atctransfer");
 });
 app.post('/atccareer', function (req, res) {
 		res.render('index');
