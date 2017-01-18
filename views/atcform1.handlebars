@@ -24,12 +24,21 @@
 	<body>
 {{> page/nav}}
 		<div class="container">
-{{#if visit}}
-    <h1>Visitor Application</h1>
-  {{/if}}
+
 
 			<form class="form-signin" name="atcCareerApp" method="post">
-				<h2 class="form-signin-heading">ATC Career application form</h2>
+			{{#if visit}}
+    <h2 class="form-signin-heading">Visiting controller application form</h2>
+  {{/if}}
+  
+  {{#if transfer}}
+    <h2 class="form-signin-heading">ATC Division transfer application form</h2>
+  {{/if}}
+  
+  {{#if career}}
+    <h2 class="form-signin-heading">ATC Career application form</h2>
+  {{/if}}
+				
 				<div class="form-group">
 					<label for="inputName">Full Name</label>
 					<input type="text" id="inputName" name="Fname"class="form-control" placeholder="John Smith" required autofocus>
