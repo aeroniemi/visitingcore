@@ -39,7 +39,7 @@ app.get('/atcvisit', function (req, res) {
 	res.render("atcvisit");
 });
 app.get('/atctransfer', function (req, res) {
-	res.render("atcform1"{
+	res.render("atcform1", {
         visit: true
         });
 });
