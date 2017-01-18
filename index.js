@@ -24,11 +24,11 @@ app.get('/', function (req, res) {
 
 	res.render("index");
 });
-// it may work, but the fix to the problems is to get rid of this
+/* it may work, but the fix to the problems is to get rid of this
 app.get('/:page', function (req, res) {
 	res.render(req.page);
 });
-
+*/
 app.get('/override', function (req, res) {
 
 	res.render("override", {
