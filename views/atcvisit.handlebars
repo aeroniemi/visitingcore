@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="src/favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Ubuntu" rel="stylesheet">
+		<title>{{title}} - visitingcore</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="src/bootstrap.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="src/style.css" rel="stylesheet">
+		<style>
+		</style>
+	</head>
+
+	<body>
+{{> page/nav}}
+		<div class="container">
+
+
+			<form class="form-signin" name="atcCareerApp" method="post">
+				<h2 class="form-signin-heading">ATC Career application form</h2>
+				<div class="form-group">
+					<label for="inputName">Full Name</label>
+					<input type="text" id="inputName" name="Fname"class="form-control" placeholder="John Smith" required autofocus>
+				</div>
+				<div class="form-group">
+					<label for="inputCID">VATSIM CID</label>
+					<input type="text" id="cid" name="cid" class="form-control" placeholder="1302142" required autofocus>
+				</div>
+				<div class="form-group">
+					<label for="inputEmail">Email address</label>
+					<input type="email" id="inputEmail" name="emailadd" class="form-control" placeholder="john.smith@rovacc.ro" required>
+				</div>
+				<div class="form-group">
+					<label for="inputDivision">VATSIM Division</label>
+					<input type="text" id="inputDivision" name="division" class="form-control" placeholder="VATEUD" required>
+				</div>
+				<div class="form-group">
+					<label for="inputVACC">VATSIM VACC</label>
+					<input type="text" id="inputVACC" name="vacc" class="form-control" placeholder="Romania" required>
+				</div>
+				<button class="btn btn-lg btn-primary btn-block" type="submit" onClick="testResults(this.form)">Submit</button>
+			</form>
+
+		</div> <!-- /container -->
+		{{> page/footer}}
+	</body>
+
+</html>
