@@ -34,17 +34,17 @@ app.get('/override', function (req, res) {
 });
 app.get('/atctransfer', function (req, res) {
 	res.render("atcform1", {
-        transfer: true
+        purpose: "transfer"
         });
 });
 app.get('/atcvisit', function (req, res) {
 	res.render("atcform1", {
-        visit: true
+        purpose: "visit"
         });
 });
 app.get('/atccareer', function (req, res) {
 	res.render("atcform1", {
-        career: true
+        purpose: "career"
         });
 });
 app.post('/atccareer', function (req, res) {
@@ -57,7 +57,7 @@ app.post('/atccareer', function (req, res) {
 		console.log(req.body);
 	});
 });
-app.post('/atcvisit', function (req, res) {
+app.post('/.$atcform*/', function (req, res) {
 	res.render('formsubmit1');
 	mailgunjs(req.body).catch(function(){
 	}).then(function (){
