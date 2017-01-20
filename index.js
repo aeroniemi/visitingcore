@@ -34,17 +34,17 @@ app.get('/override', function (req, res) {
 });
 app.get('/atctransfer', function (req, res) {
 	res.render("atcform1", {
-        purpose: "transfer"
+        transfer: true
         });
 });
 app.get('/atcvisit', function (req, res) {
 	res.render("atcform1", {
-        purpose: "visit"
+        visit: true
         });
 });
 app.get('/atccareer', function (req, res) {
 	res.render("atcform1", {
-        purpose: "career"
+        care: true
         });
 });
 app.post('/atccareer', function (req, res) {
